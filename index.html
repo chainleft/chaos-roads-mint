@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaos Roads</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+<script src="https://cdn.jsdelivr.net/npm/ethers@5.4.6/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <button id="connectWalletButton">Connect</button>
+    </div>
+  </header>
+  <main>
+    <h1 class="text-center">Chaos Roads</h1>
+    <span id="remainingNFTs" class="text-center"></span>
+    <div class="container text-center">
+      <select id="mintAmount">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <button id="mintButton">Mint</button>
+      <span class="text-large">Price: 0.02 ETH</span>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
