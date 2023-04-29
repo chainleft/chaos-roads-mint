@@ -20,13 +20,24 @@
       <select id="mintAmount">
         <option value="1">1</option>
         <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
       </select>
       <button id="mintButton">Mint</button>
-      <span class="text-large">Price: 0.02 ETH</span>
+      <span class="text-large" id="price">Price: 0.03 ETH</span>
     </div>
   </main>
+  <script>
+    const basePrice = 0.03;
+    const mintAmountDropdown = document.getElementById('mintAmount');
+    const priceElement = document.getElementById('price');
+
+    mintAmountDropdown.addEventListener('change', updatePrice);
+
+    function updatePrice() {
+      const mintAmount = parseInt(mintAmountDropdown.value);
+      const totalPrice = (basePrice * mintAmount).toFixed(2);
+      priceElement.textContent = `Price: ${totalPrice} ETH`;
+    }
+  </script>
   <script src="main.js"></script>
 </body>
 </html>
